@@ -83,4 +83,4 @@ const firebaseConfig = {
 
   export const onAuthStateChangedListener = (callback) => {
     onAuthStateChanged(auth, callback);
-  }
+  };

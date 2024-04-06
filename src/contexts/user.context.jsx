@@ -4,8 +4,8 @@ import { onAuthStateChangedListener, createUserDocumentFromAuth } from "../utils
 
 // as the actual value you want to access
 export const UserContext = createContext({
-    currentUser: null,
     setCurrentUser: () => null,
+    currentUser: null,
 });
 
 export const UserProvider = ({ children }) => {
@@ -16,12 +16,11 @@ export const UserProvider = ({ children }) => {
         const unsubscribe = onAuthStateChangedListener((user) => {
             if(user) {
                 createUserDocumentFromAuth(user);
-            } else {
-                setCurrentUser(user);
             }
+            setCurrentUser(user);
         });
 
         return unsubscribe;
-    },[]);
+    }, []);
     return <UserContext.Provider value={value}>{children}</UserContext.Provider>
 }
