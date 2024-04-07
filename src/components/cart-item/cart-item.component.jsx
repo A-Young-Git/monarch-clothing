@@ -3,6 +3,7 @@ import React from 'react'
 
 const CartItem = ({cartItem}) => {
     const { name, quantity, imageUrl, price } = cartItem;
+    
   return (
     <div className='cart-item-container'>
         <img src={imageUrl} alt={`${name}`} />
