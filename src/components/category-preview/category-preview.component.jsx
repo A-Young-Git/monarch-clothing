@@ -1,5 +1,4 @@
 import ProductCard from '../product-card/product-card.component';
-import { Link } from 'react-router-dom';
 import React from 'react';
 import { CategoryPreviewContainer, Preview, Title } from './category-preview.styles';
 
